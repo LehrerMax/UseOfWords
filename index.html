@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Word Games</h1>
+    <div>
+        <select id="gameTypeSelect">
+            <option value="">Select Game Type</option>
+            <option value="opposites">Opposites</option>
+            <option value="synonyms">Synonyms</option>
+            <option value="verbsOrAdverbs">Verbs or Adverbs</option>
+        </select>
+        <button onclick="loadGameType()">Load Game Type</button>
+    </div>
+    <div id="gameControls" style="display: none;">
+        <button onclick="chooseGameMode('typing')">Typing Game</button>
+        <button onclick="chooseGameMode('multipleChoice')">Multiple Choice Game</button>
+    </div>
+    <div id="gameArea" style="display: none;">
+        <p id="displayWord">Sentence: <span id="randomWord"></span></p>
+        <div id="typingGame" class="inactive">
+            <input type="text" id="userInput" placeholder="Enter the word...">
+            <button onclick="checkOpposite()">Submit</button>
+        </div>
+        <div id="multipleChoiceGame" class="inactive">
+            <button id="choice1" class="choice-btn"></button>
+            <button id="choice2" class="choice-btn"></button>
+            <button id="choice3" class="choice-btn"></button>
+            <button id="choice4" class="choice-btn"></button>
+        </div>
+        <button id="skipButton" onclick="skipWord()">Skip</button>
+        <p id="result"></p>
+        <p id="counter" class="counter"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

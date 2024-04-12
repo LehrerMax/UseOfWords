@@ -1,0 +1,86 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Ensure consistent font usage */
+    background-color: #f4f4f9; /* Light background for readability */
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header styling */
+h1 {
+    color: #4a47a3;
+    font-size: 24px; /* Larger font size for the header */
+}
+
+/* Form and controls styling */
+select, input[type="text"], button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Appropriate font size for form elements */
+    width: 200px; /* Standard width to align form elements */
+    background-color: #4a47a3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6c63ff;
+}
+
+/* Game mode specific background colors */
+body.typingMode {
+    background-color: #FFD6E0; /* Light pink for typing game */
+}
+
+body.multipleChoiceMode {
+    background-color: #D6E0FF; /* Light blue for multiple choice game */
+}
+
+/* Game area specific styling */
+#gameArea {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style for active and inactive game modes */
+#typingGame.active, #multipleChoiceGame.active {
+    display: block; /* Show active game mode */
+}
+
+#typingGame.inactive, #multipleChoiceGame.inactive {
+    display: none; /* Hide inactive game mode */
+}
+
+/* Choice buttons for multiple choice game */
+.choice-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #4a47a3;
+    color: white;
+}
+
+.choice-btn:hover {
+    background-color: #6c63ff;
+}
+
+/* Counter and result messages styling */
+.counter, #result {
+    font-size: 16px; /* Consistent font size for feedback messages */
+    margin-top: 10px;
+}
+
+#result {
+    color: #d62828; /* Red color for incorrect answers */
+}
+
+#result.correct {
+    color: #2f9e44; /* Green color for correct answers */
+}
